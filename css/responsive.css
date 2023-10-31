@@ -1,0 +1,92 @@
+@media only screen and (max-width:750px){
+    .nav{
+        flex-direction: column;
+        height: 90px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav .logo {
+        margin-left: 0px;
+    }
+
+    .nav .list ul li{
+        margin: 0 0;
+    }
+
+    .infoSection .devPic img{
+        display: none;
+    }
+
+    .infoSection{
+        flex-direction: column;
+        height: 300px;
+        width: 100vw;
+    }
+
+    .infoSection .devInfo{
+        margin-left: 25px;
+    }
+
+    /* About */
+
+    .about{
+        height: 300px;
+    }
+
+    .about .hackerImg img{
+        display: none;
+    }
+
+    .about .hackerImg{
+        border: none;
+    }
+
+    .about .aboutTxtHead{
+        margin-left: 25px;
+        margin-bottom: 25px;
+    }
+
+    /* Services */
+
+    .serviceSection{
+        height: 900px;
+    }
+
+    .serviceSection .row{
+        flex-direction: column;
+    }
+
+    .serviceSection .row .service{
+        margin: 10px;
+    }
+
+    /* Contact */
+
+    .formSection{
+        flex-direction: column;
+        height: 600px;
+        text-align: center;
+        
+    }
+
+    .formSection form{
+        margin: 0 auto;
+    }
+
+    .formSection form .btn{
+        margin-left: 0px;
+    }
+}
+
+
+@media only screen and (max-width:400px){
+    
+    .nav .logo {
+        margin-left: 0px;
+    }
+    
+    .nav .list ul li{
+        margin: 0px -10px;
+    }
+}

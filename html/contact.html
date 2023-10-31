@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <title>Huzaifa's Portfolio</title>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">
+            <div><a href="index.html">Huzaifa's Portfolio</a></div>
+        </div>
+        <div class="list">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./contact.html" id="active">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="formSection">
+            <div class="formText">
+                <p>Fill the form for <span class="important">Contact me</span> and Any query. If you want to join
+                    our team So, fill the form and anyone want to build a any <span class="important">Websites, Games,
+                        Aaps</span>
+                    So, Contact me.
+                </p>
+            </div>
+            <form onsubmit="emailsend()">
+                <!-- Text input for username -->
+                <label for="username">Username:</label> <br>
+                <input type="text" id="username" name="username" required>
+                <br><br>
+
+                <!-- Password input -->
+                <label for="password">Password:</label> <br>
+                <input type="password" id="password" name="password" required>
+                <br><br>
+
+                <!-- Email -->
+                <label for="Email">Email:</label> <br>
+                <input type="email" id="email" name="email" required> <br> <br>
+
+                <!-- Selection -->
+                <label for="choose">Choose:</label> <br>
+                <select name="choose" id="choose">
+                    <option></option>
+                    <option value="Website">Website Development</option>
+                    <option value="Game">Game Development</option>
+                    <option value="App">App Development</option>
+                    <option value="join">Joining Team</option>
+                    <option value="Other">Other</option>
+
+                </select> <br><br>
+
+                <!-- Radio buttons for gender -->
+                <label>Gender:</label> <br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <br>
+
+                <!-- Submit button -->
+                <input type="submit" value="Submit" class="btn">
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+
+        function sendmail() {
+
+            var name = $('#Name').val();
+            var email = $('#Sender').val();
+            var subject = $('#Subject').val();
+            var message = $('#Message').val();
+
+            // var body = $('#body').val();
+
+            var Body = 'Name: ' + name + '<br>Email: ' + email + '<br>Subject: ' + subject + '<br>Message: ' + message;
+            //console.log(name, phone, email, message);
+
+            Email.send({
+                SecureToken: "fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
+                To: 'optimalweb09@gmail.com',
+                From: "demooptimalweb@gmail.com",
+                Subject: "New message on contact from " + name,
+                Body: Body
+            }).then(
+                message => {
+                    //console.log (message);
+                    if (message == 'OK') {
+                        alert('Your mail has been send. Thank you for connecting.');
+                    }
+                    else {
+                        console.error(message);
+                        alert('There is error at sending message. ')
+
+                    }
+
+                }
+            );
+
+
+
+        }
+
+
+    </script>
+    </script>
+</body>
+
+</html>

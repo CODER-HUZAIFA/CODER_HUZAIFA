@@ -1,0 +1,52 @@
+.serviceSection{
+    width: 80vw;
+    height: 360px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 30px;
+    background-color: rgb(0, 0, 95);
+}
+
+.serviceSection .row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.serviceSection .row .service{
+    /* border: 2px solid white; */
+    margin: 40px;
+    height: 200px;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.serviceSection .row .service .serviceLogo{
+    margin-top: 20px;
+    filter: invert(100%);
+}
+
+.serviceSection .row .service .serviceLogo img{
+    height: 50px;
+    width: 60px;
+}
+
+.serviceSection .row .service .serviceName{
+    color: white;
+}
+
+.serviceSection .row .service .serviceDescrip{
+    text-align: center;
+    color: red;
+    font-size: 10px;
+}
+
+.serviceSection .row .service .serviceBtn .btn{
+    height: 20px;
+}
+
+.serviceSection .row .service .serviceBtn .btn a{
+    font-size: 14px;
+}
